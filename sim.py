@@ -34,10 +34,11 @@ def move_forward(robot, distance):
         x = adjacent * -1
         y = opposite * 1
 
-    print((x, y))
+    return (x, y)
+
 
 # uses sin instead sqrt
-def move_forwardS(robot, distance):
+def move_forwards(robot, distance):
     relative_angle = robot.rotation["degree"] % 90
 
     # zone 0; x:pos y:pos
@@ -62,12 +63,13 @@ def move_forwardS(robot, distance):
         x = adjacent * -1
         y = opposite * 1
 
-    print((x, y))
+    return (x, y)
 
 def move_turn(robot, distance, ratio):
+    pass
 
 if __name__ == "__main__":
-    move_forwardS(Robot(), 10)
+    print (move_forwards(Robot(), 10))
 
 
 
