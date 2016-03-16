@@ -1,5 +1,5 @@
 from math import sin, sqrt, cos
-from unites import Angle
+from unites import Angle, Ratio
 
 
 class Robot:
@@ -34,7 +34,7 @@ def move_forward(robot, distance):
         x = adjacent * -1
         y = opposite * 1
 
-    return (x, y)
+    return x, y
 
 
 # uses sin instead square root
@@ -63,7 +63,7 @@ def move_forwards(robot, distance):
         x = adjacent * -1
         y = opposite * 1
 
-    return (x, y)
+    return x, y
 
 
 def move_turn(robot, distance, ratio):
