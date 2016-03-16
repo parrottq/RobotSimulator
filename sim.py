@@ -37,7 +37,7 @@ def move_forward(robot, distance):
     return (x, y)
 
 
-# uses sin instead sqrt
+# uses sin instead square root
 def move_forwards(robot, distance):
     relative_angle = robot.rotation["degree"] % 90
 
@@ -64,6 +64,7 @@ def move_forwards(robot, distance):
         y = opposite * 1
 
     return (x, y)
+
 
 def move_turn(robot, distance, ratio):
     pass

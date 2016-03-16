@@ -36,6 +36,29 @@ class Angle:
         self.pi_angle = value * ((pi*2) / 360)
 
 
+class Ratio:
+
+    def __init__(self, right, left):
+        self.right = right
+        self.left = left
+
+    def __getitem__(self, item):
+        if item == "right":
+            return self.right
+        elif item == "left":
+            return self.left
+        else:
+            raise KeyError
+
+    def __setitem__(self, item, value):
+        if item == "right":
+            self.right = value
+        elif item == "left":
+            self.left = value
+        else:
+            raise KeyError
+
+
 if __name__ == "__main__":
     a = Angle()
     # a["pi"] = pi * 1
