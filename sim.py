@@ -67,22 +67,18 @@ def move_forwards(robot, distance):
 
 
 def move_turn(robot, distance, ratio):
-    pass
+    right = ratio["right"]
+    left = ratio["left"]
+    diameter = 10.0
+
+    difference = diameter / (left - right)
+    print(abs(difference))
+
+    if left > right:
+        pass
+    if left < right:
+        pass
+
 
 if __name__ == "__main__":
-    print (move_forwards(Robot(), 10))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    move_turn(Robot(), 10, Ratio(15, 2))
